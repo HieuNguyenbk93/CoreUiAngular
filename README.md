@@ -28,3 +28,25 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Webpack-bundle-analyzer
+
+Reference [100 days of angular](https://www.youtube.com/watch?v=D0Tv5BaNTa8&list=PLMTyi4Bfd5pW73uXw-6jgRxDwdPYqwk0r&index=28)
+
+Create app route link: login (login component) and admin(component has the same layout)
+Create componets: 
+- login 
+- dasboard, user-profile (have a same layout)
+- footer, navbar, sidebar (must declaration to use selector, they are declared in component.moudle, and import in app.moudle)
+- admin-layout (use footer, navbar, sidebar to build layout). Create module and component admin-layout. When the module has component, it called layout.
+  - To use selector component (must declare and import components in a module)
+
+Create route for admin-layout module. Not use routing.module that is the same angular. Instead of, create file routing.ts, it have list route. In module, import `RouterModule.forChild(AdminLayoutRoutes)`. Practice lazy loading in app.route: app.module is in file js, admin-layout.module is in anther file js. Only load admin-layout, file js 
+
+To use webpack-bundle-analyzer:
+- `npm install --save-dev webpack-bundle-analyzer`
+- set `"outputHashing": "none"` in auglar.json
+- `ng build --stats-json`
+- cd dist/core-ui-angular: `npx webpack-bundle-analyzer stats.json`
+
+
