@@ -1,0 +1,22 @@
+.logo {
+  padding: 15px 0px;
+  margin: 0;
+  display: block;
+  position: relative;
+  z-index: 4;
+  background-color: aqua;
+}
+
+.logo-img{
+  width: 35px;
+  display: block;
+  max-height: 30px;
+  margin-left: 13px;
+  margin-right: 15px;
+}
+
+.logo-img img{
+  width: 35px;
+  top: 16px;
+  position: absolute;
+}
